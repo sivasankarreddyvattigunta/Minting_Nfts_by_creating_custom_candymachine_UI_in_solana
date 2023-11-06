@@ -86,7 +86,7 @@ $ yarn install
 
 ### Author Information:
 
-**GitHub Profile for Sivasankar Reddy Vattigunta:**
+**GitHub Profile for Siva Sankar Reddy Vattigunta:**
 [Sivasankar Reddy Vattigunta](https://github.com/sivasankarreddyvattigunta)
 
 ### License:
