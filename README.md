@@ -86,10 +86,11 @@ $ yarn install
 
 ### Author Information:
 
-**GitHub Profile for Siva Sankar Reddy Vattigunta:**
+
 [Sivasankar Reddy Vattigunta](https://github.com/sivasankarreddyvattigunta)
 
 ### License:
 
-**License:** [https://github.com/sivasankarreddyvattigunta/Minting_Nfts_by_creating_custom_candymachine_UI_in_solana/blob/main/LICENSE]
+**License**
+[License](https://github.com/sivasankarreddyvattigunta/Minting_Nfts_by_creating_custom_candymachine_UI_in_solana/blob/main/LICENSE)
 
