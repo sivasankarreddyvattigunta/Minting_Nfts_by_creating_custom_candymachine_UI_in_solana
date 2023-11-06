@@ -1,0 +1,70 @@
+root@THEODORE:~/candymachine# spl-token create-token --mint-authority $walletpath --fee-payer $walletpath
+Creating token Q under program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA
+
+Address:  CtsQmcZSiGj3rRXJkyQXLCtScRi2ATxtoWa2kPNRrByQ
+Decimals:  9
+
+Signature: 4f4VzRcvGMLba1KTJTCnbRGnARzoreyxhbjsFDKfqqbZbFL9oiGn5xGBzSaYp15HReXnLz3Rxv1GbRuGXX8PcAEQ
+
+root@THEODORE:~/candymachine# solana airdrop 2
+Requesting airdrop of 2 SOL
+
+Signature: 5RQDMxuwsamKeY98KfKzManQgHXbPbihEY6UfkSHjY8nsbDGkoPae7BwLUELrH7hiWDyN23CH8Q7dCkG3xksuyUk
+
+3.839788512 SOL
+root@THEODORE:~/candymachine# tokenaddress='CtsQmcZSiGj3rRXJkyQXLCtScRi2ATxtoWa2kPNRrByQ'
+root@THEODORE:~/candymachine# spl-token supply $tokenaddress
+0
+
+root@THEODORE:~/candymachine# solana balance $walletaddress 
+3.839788512 SOL
+root@THEODORE:~/candymachine# solana account $tokenaddress 
+
+root@THEODORE:~/candymachine# spl-token create-account --owner $walletpath --fee-payer $walletpath $tokenaddress 
+Creating account 5ZREaMcgwiYKrkEfqxB6PVLxdYzE976UKT2wCM2rvRQd
+
+Signature: 3MmeYZYDG1kdsGHnQZSjeGmeHhSBLrnxd4tJXqGYUTxvkPt1eXYkqxggiiJhJaj4gCMT6YPmqDs8qAZEtZsc871c
+
+root@THEODORE:~/candymachine# tokenaccount=5ZREaMcgwiYKrkEfqxB6PVLxdYzE976UKT2wCM2rvRQd
+root@THEODORE:~/candymachine# solana account $tokenaccount 
+
+Public Key: 5ZREaMcgwiYKrkEfqxB6PVLxdYzE976UKT2wCM2rvRQd
+Balance: 0.00203928 SOL
+root@THEODORE:~/candymachine# spl-token account-info --address $tokenaccount 
+
+SPL Token Account
+  Address: 5ZREaMcgwiYKrkEfqxB6PVLxdYzE976UKT2wCM2rvRQd
+  Program: TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA
+  Balance: 0
+  Decimals: 9
+  Mint: CtsQmcZSiGj3rRXJkyQXLCtScRi2ATxtoWa2kPNRrByQ
+  Owner: 9RyfhjU12EXKnZSWDKjMJokK4aKymQmjKmkCZP2XgiXd
+  State: Initialized
+  Delegation: (not set)
+  Close authority: (not set)
+
+root@THEODORE:~/candymachine# solana transfer 1 $tokenaccount
+error: Invalid value for '<RECIPIENT_ADDRESS>': No such file or directory (os error 2)
+root@THEODORE:~/candymachine# solana transfer 1 5ZREaMcgwiYKrkEfqxB6PVLxdYzE976UKT2wCM2rvRQd
+error: Invalid value for '<RECIPIENT_ADDRESS>': No such file or directory (os error 2)
+root@THEODORE:~/candymachine# spl-token mint $tokenaddress 413 $tokenaccount \
+    --fee-payer $walletpath \
+    --mint-authority $walletpath 
+Minting 413 tokens
+  Token: CtsQmcZSiGj3rRXJkyQXLCtScRi2ATxtoWa2kPNRrByQ
+  Recipient: 5ZREaMcgwiYKrkEfqxB6PVLxdYzE976UKT2wCM2rvRQd
+
+Signature: 4P3Qy1iroVqgdVBe81sFuNfh4pZczit7LQ64z7Sb5ie7rFSAjKVFs1DW38gevEMNTDtDqUg1oGYeGeiKhBNRjdAx
+
+root@THEODORE:~/candymachine# spl-token balance --address $ALICE_ALICETOKENACCOUNT
+spl-token supply $tokenaddress 
+error: The argument '--address <TOKEN_ACCOUNT_ADDRESS>' requires a value but none was supplied
+
+USAGE:
+    spl-token balance <TOKEN_MINT_ADDRESS> --address <TOKEN_ACCOUNT_ADDRESS>
+
+For more information try --help
+413
+
+root@THEODORE:~/candymachine# spl-token balance --address $tokenaccount 
+413

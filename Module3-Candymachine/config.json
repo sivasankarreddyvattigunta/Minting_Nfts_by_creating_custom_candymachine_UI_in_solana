@@ -1,0 +1,24 @@
+{
+  "price": 0.01,
+  "number": 10,
+  "symbol": "NB",
+  "sellerFeeBasisPoints": 500,
+  "gatekeeper": null,
+  "solTreasuryAccount": null,
+  "splTokenAccount": "5ZREaMcgwiYKrkEfqxB6PVLxdYzE976UKT2wCM2rvRQd",
+  "splToken": "CtsQmcZSiGj3rRXJkyQXLCtScRi2ATxtoWa2kPNRrByQ",
+  "goLiveDate": "2022-07-24T00:00:00Z",
+  "endSettings": null,
+  "whitelistMintSettings": null,
+  "hiddenSettings": null,
+  "uploadMethod": "bundlr",
+  "awsS3Bucket": null,
+  "retainAuthority": true,
+  "isMutable": true,
+  "creators": [
+  {
+    "address": "9RyfhjU12EXKnZSWDKjMJokK4aKymQmjKmkCZP2XgiXd",
+    "share": 100
+  }
+]
+}
